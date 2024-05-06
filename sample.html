@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Profile - Pet Adoption Center</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F4F4F4; /* Light Gray */
+    }
+
+    header {
+      background-color: #FF8C00; /* Dark Orange */
+      color: #FFFFFF; /* White */
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo img {
+      max-height: 50px;
+    }
+    .navigation ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    .navigation li {
+      margin-left: 20px;
+    }
+    
+    .pet-profile button {
+  background-color: #008000; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px; /* Adjusted padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px; /* Adjusted margin top */
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.pet-profile button:hover {
+  background-color: #006400; /* Darker green on hover */
+}
+    .navigation button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+    .navigation button img {
+      max-width: 30px;
+      height: auto;
+      margin-right: 5px;
+    }
+    .navigation button::after {
+      content: "";
+      width: 1px;
+      height: 20px;
+      background-color: white;
+      margin-left: 10px;
+    }
+    .navigation button:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content styles */
+    .main-content {
+      padding: 20px;
+      text-align: center;
+    }
+    .pet-image img {
+      max-width: 45%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .image-container {
+      background-color: #FFFFFF; /* White */
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .pet-image img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 10px;
+    }
+    .adopt-me-button {
+      background-color: #FF6347; /* Tomato */
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .adopt-me-button:hover {
+      background-color: #CD5C5C; /* Indian Red */
+    }
+    .quiz-section {
+      background-color: #6495ED; /* Cornflower Blue */
+      padding: 40px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .quiz-button {
+      background-color: #4169E1; /* Royal Blue */
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+    .quiz-button:hover {
+      background-color: #1E90FF; /* Dodger Blue */
+    }
+    .quiz-heading {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .quiz-description {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="Pet Adoption Center Logo">
+    </div>
+    <nav class="navigation">
+      <ul>
+        <li><button><img src="home.png" alt="Home"> Home</button></li>
+        <li><button><img src="buy.jpeg" alt="Buy"> Buy</button></li>
+        <li><button><img src="login.jpeg" alt="Login"> Login</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <!-- Pet image -->
+    <div class="pet-image">
+      <div class="image-container">
+        <img src="pet.jpg" alt="Pet Image">
+      </div>
+    </div>
+
+    <!-- Adopt Me button -->
+    <button class="adopt-me-button">Adopt Me</button>
+
+    <!-- Quiz section -->
+    <div class="quiz-section">
+      <h2 class="quiz-heading">Not sure which pet to adopt?</h2>
+      <p class="quiz-description">Take our quiz to find your perfect match!</p>
+      <button class="quiz-button">Take Quiz</button>
+    </div>
+  </div>
+
+</body>
+</html>

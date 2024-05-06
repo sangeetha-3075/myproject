@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Adoption Center</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: 'Roboto', sans-serif; /* Use the imported font */
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9; /* Light background */
+    }
+
+    header {
+      background-color: #ff6f61; /* Red */
+      color: #fff;
+      padding: 0.2rem;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      width: 10000px; /* Set the desired width */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    .navigation ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navigation ul li {
+      display: inline-block;
+      margin-left: 40px; /* Add spacing between navigation items */
+    }
+
+    .navigation ul li:first-child {
+      margin-left: 0; /* Remove margin for the first navigation item */
+    }
+
+    .navigation ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 100px; /* Adjust height as needed */
+      width: auto;
+    }
+
+    .header-title h1 {
+      margin-left: 20px; /* Add margin to separate logo and title */
+    }
+
+    .navigation ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navigation li {
+      margin-left: 20px; /* Add margin between navigation items */
+    }
+
+    .navigation a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navigation a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      display: flex; /* Use flexbox layout */
+      justify-content: center; /* Center main content horizontally */
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+
+    /* Search form styles */
+    #search-section {
+      width: 45%; /* Adjusted width */
+      padding: 1.5rem; /* Adjusted padding */
+      background-color: #fff; /* White background */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+      margin-top: 50px; /* Add space from the top */
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 0.5rem; /* Adjusted margin */
+    }
+
+    input,
+    select {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 1rem; /* Adjusted margin */
+    }
+
+    /* Adjusted CSS styles for the button */
+    button {
+      background-color: #ff6f61; /* Red */
+      color: #fff;
+      padding: 20px 70px; /* Adjusted padding */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 1rem; /* Adjusted margin */
+    }
+
+    button:hover {
+      background-color: #ff5246; /* Darker red on hover */
+    }
+
+    #pet-list {
+      display: grid; /* Use grid layout */
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      grid-gap: 20px; /* Gap between grid items */
+    }
+
+    .pet-profile {
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+      transition: transform 0.3s ease;
+    }
+
+    .pet-profile:hover {
+      transform: translateY(-5px); /* Lift up on hover */
+    }
+
+    .pet-profile img {
+      max-width: 100%;
+      max-height: 200px; /* Set maximum height for the image */
+      height: auto;
+      border-radius: 10px;
+      display: block; /* Ensure image behaves as block element */
+      margin: 0 auto 1rem; /* Center the image horizontally and add space at the bottom */
+    }
+
+    .pet-profile h2 {
+      margin-top: 0;
+      color: #333;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .pet-profile p {
+      margin-bottom: 5px; /* Add margin bottom to create space between description lines */
+    }
+
+    .pet-profile p.description {
+      margin-bottom: 1rem; /* Adjust as needed */
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px; /* Add space between pet profiles and the button container */
+    }
+
+    #pet-list-section h2 {
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="Pawsome FurEver Logo.jpg" alt="Pawsome FurEver Logo">
+      </div>
+      <div class="header-title">
+        <h1>Pawsome FurEver Pets Adoption Center</h1>
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Buy</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section id="search-section">
+      <h2>Find Your Perfect Pet!</h2>
+      <form id="search-form">
+        <div class="form-group">
+          <label for="owner-name">Your Name:</label>
+          <input type="text" id="owner-name" name="owner-name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="owner-state">Your State:</label>
+          <input type="text" id="owner-state" name="owner-state" placeholder="Enter your state">
+        </div>
+        <div class="form-group">
+          <label for="owner-country">Your Country:</label>
+          <input type="text" id="owner-country" name="owner-country" placeholder="Enter your country">
+        </div>
+        <div class="form-group">
+          <label for="pet-type">Type of Pet You're Looking For:</label>
+          <select id="pet-type" name="pet-type">
+            <option value="all">Any</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Rabbit">Rabbit</option>
+            <option value="Snake">Snake</option>
+            <option value="Racoon">Racoon</option>
+            <option value="Fox">Fox</option>
+            <option value="Sparrow">Sparrow</option>
+            <option value="Pig">Pig</option>
+            <option value="Fish">Fish</option>
+            <!-- Add more options for different types of pets -->
+          </select>
+        </div>
+        <button type="submit">Find Pets</button>
+      </form>
+    </section>
+    
+    <section id="pet-list-section">
+      <div class="heading-container">
+        <h2>Pets Available for Adoption</h2>
+      </div>
+      <div id="pet-list">
+        <!-- Pet profiles will be dynamically generated here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Virtual Pet Adoption Center</p>
+  </footer>
+
+  <script>
+    // Sample pet data
+    const pets = [
+      { name: "Buddy", type: "Dog", age: 3, personality: "Friendly and playful", image: "buddy.jpg", description: "Buddy is a friendly dog who loves playing fetch and going for walks in the park." },
+      { name: "Whiskers", type: "Cat", age: 2, personality: "Independent but affectionate", image: "whiskers.jpg", description: "Whiskers is a sweet cat who enjoys lounging in the sun and cuddling on the couch." },
+      { name: "Snowball", type: "Rabbit", age: 1, personality: "Curious and energetic", image: "snowball.jpg", description: "Snowball is an adorable rabbit who loves exploring and nibbling on fresh veggies." },
+      { name: "Bubble", type: "Dog", age: 1, personality: "Friendly and active", image: "bubble.jpg", description: "Bubble is a friendly dog which is too cut while sleeping and very active." },
+      { name: "Rexa", type: "Cat", age: 2, personality: "Outgoingness but Dominance", image: "rexa.jpg", description: "Rexa is a cute cat who enjoys going out but aggressive with some other cats." },
+      { name: "Lexa", type: "Sparrow", age: 1, personality: "Loyal and energetic", image: "lexa.jpg", description: "Lexa is an adorable sparrow which is very loyal to the owner and very active around the people." },
+      { name: "Max", type: "Dog", age: 4, personality: "Gentle and loyal", image: "max.jpg", description: "Max is a loyal dog who loves cuddling and going for long walks." },
+      { name: "Mittens", type: "Cat", age: 3, personality: "Curious but shy", image: "mittens.jpg", description: "Mittens is a shy cat who enjoys exploring new places and hiding in cozy spots." },
+      { name: "Fluffy", type: "Pig", age: 2, personality: "Playful and affectionate", image: "fluffy.jpg", description: "Fluffy is an energetic Pig who loves hopping around and being cuddled by their owner." },
+      { name: "Rocky", type: "Dog", age: 2, personality: "Energetic and adventurous", image: "rocky.jpg", description: "Rocky is an adventurous dog who loves hiking and playing fetch." },
+      { name: "Luna", type: "Cat", age: 1, personality: "Mischievous but loving", image: "luna.jpg", description: "Luna is a playful cat who enjoys chasing toys and snuggling with their owner." },
+      { name: "Kiwi", type: "Squirrel", age: 2, personality: "Sociable and talkative", image: "kiwi.jpg", description: "Kiwi is a sociable Squirrel who loves chatting with their owner and learning new tricks." },
+      { name: "Charlie", type: "Dog", age: 5, personality: "Calm and obedient", image: "charlie.jpg", description: "Charlie is a calm and obedient dog who enjoys relaxing at home and going for leisurely walks." },
+      { name: "Whiskey", type: "Chicken", age: 4, personality: "Regal and independent", image: "whiskey.jpg", description: "Whiskey is a chicken who prefers to observe from a distance but enjoys occasional affection from their owner." },
+      { name: "Pepper", type: "Rabbit", age: 3, personality: "Clever and curious", image: "pepper.jpg", description: "Pepper is a clever rabbit who enjoys solving puzzles and exploring new environments." },
+      { name: "Bella", type: "Racoon", age: 3, personality: "Affectionate and playful", image: "bella.jpg", description: "Bella is an affectionate Racoon who loves cuddling with their owner and playing fetch in the park." },
+      { name: "Smokey", type: "Snake", age: 2, personality: "Mysterious but affectionate", image: "smokey.jpg", description: "Smokey is a mysterious python baby snake who enjoys lounging in sunbeams and receiving gentle pets from their owner." },
+      { name: "Sky", type: "Fox", age: 1, personality: "Energetic and curious", image: "sky.jpg", description: "Sky is an energetic Fox who loves exploring new toys." },
+      { name: "Coco", type: "Flying fox", age: 2, personality: "Mysterious but affectionate", image: "coco.jpg", description: "Coco is a mysterious flying fox who enjoys lounging in sunbeams and receiving gentle pets from their owner." },
+      { name: "Nemo", type: "Fish", age: 1, personality: "Energetic and curious", image: "nemo.jpg", description: "Nemo is an energetic fish who loves swimming in the water with their friends and it is also treated as luck fish as it is golden fish." }
+    ];
+
+    // Function to generate pet profiles
+    function generatePetProfiles(petsData) {
+      const petListSection = document.getElementById("pet-list");
+
+      petListSection.innerHTML = ""; // Clear existing pet profiles
+
+      petsData.forEach(pet => {
+        const petProfile = document.createElement("article");
+        petProfile.classList.add("pet-profile");
+
+        petProfile.innerHTML = `
+          <img src="${pet.image}" alt="${pet.name}">
+          <h2>${pet.name}</h2>
+          <p><strong>Type:</strong> ${pet.type}</p>
+          <p><strong>Age:</strong> ${pet.age} years old</p>
+          <p><strong>Personality:</strong> ${pet.personality}</p>
+          <p><strong>Description:</strong> ${pet.description}</p>
+          <button onclick="adoptPet('${pet.name}')">Adopt ${pet.name}</button>
+        `;
+
+        petListSection.appendChild(petProfile);
+      });
+    }
+
+    // Function to simulate pet adoption
+    function adoptPet(petName) {
+      alert(`Congratulations! You've adopted ${petName}!`);
+    }
+
+    // Generate pet profiles when the page loads
+    window.addEventListener("load", function() {
+      generatePetProfiles(pets);
+    });
+  </script>
+</body>
+</html>

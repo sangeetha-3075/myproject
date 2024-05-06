@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FurEver Pet Adoption Center</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #98b6de;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo img {
+      height: 100px;
+      width: 250px;
+      max-height: 65px;
+    }
+    .navigation ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    .navigation li {
+      margin-left: 5px;
+    }
+    .navigation button {
+      background: none;
+      border: none;
+      color: black;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex; 
+      align-items: center;
+      margin-left: 10px;
+    }
+    .navigation button img {
+      max-width: 30px; 
+      height: auto;
+      margin-right: 5px; 
+    }
+    .navigation button::after {
+      content: ""; 
+      width: 1px;
+      height: 20px;
+      background-color: black; 
+      margin-left: 10px;
+    }
+    .navigation button:hover {
+      text-decoration: underline;
+    }
+    .main-content {
+      padding: 20px;
+      text-align: center;
+    }
+    .pet-image img {
+      max-width: 45%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .image-container {
+      background-color: #2c4875; 
+      padding: 10px;
+      border-radius: 10px;
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+    }
+    .pet-image img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 10px; 
+    }
+    .adopt-me-button {
+      background-color: #060906;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .adopt-me-button:hover {
+      background-color: #343534;
+    }
+    
+    .quiz-section {
+      background-color: #B0C4DE; 
+      padding: 40px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .quiz-button {
+      background-color: #060906;
+      color: white;
+      padding: 15px 30px; 
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+    .quiz-button:hover {
+      background-color: #757675;
+    }
+    .quiz-heading {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .quiz-description {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    .animated-adopt-me-button {
+        position: absolute;
+        bottom: 20px; 
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black; 
+        color: white;
+        padding: 15px 25px; 
+        border: 2px solid #4CAF50;
+        border-radius: 30px; 
+        cursor: pointer;
+        font-size: 18px; 
+        font-weight: bold; 
+        text-transform: uppercase; 
+        letter-spacing: 1px; 
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        z-index: 9999; 
+        animation: bounce 2s infinite;
+    }
+
+    .animated-adopt-me-button:hover {
+        background-color: #45a049; 
+        border-color: #45a049; 
+    }
+.adopt-me-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #060906;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.adopt-me-button:hover {
+  background-color: #343534;
+}
+.social-icons img {
+  width: 30px; 
+  height: 30px; 
+  margin-right: 10px; 
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="social-icons">
+      <a href="#"><img src="whatsapp logo.png" ></a>
+      <a href="#"><img src="instagram.png"></a>
+      <a href="#"><img src="twitter.png"></a>
+      <a href="#"><img src="facebook.png"></a>
+      <a href="#"><img src="call logo.png"></a>
+    </div>
+    <div class="logo">
+      <img src="other logo.jpg" alt="Pet Adoption Center Logo">
+    </div>
+    <nav class="navigation">
+      <ul>
+        <li><button><img src="home logo.jpg" alt="Home"> Home</button></li>
+        <li><button><img src="buy.jpeg" alt="Buy"> Buy</button></li>
+        <li><button><img src="login.png" alt="login"> Login</button></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main-content">
+    <div class="pet-image">
+      <div class="image-container">
+        <img src="sample.jpg" alt="Pet Image">
+        <div class="button-container">
+          <button class="animated-adopt-me-button">Adopt Me</button>
+        </div>
+      </div>
+    </div>
+    <div class="quiz-section">
+      <h2 class="quiz-heading">Not sure which pet to adopt?</h2>
+      <p class="quiz-description">Take our quiz to find your perfect match!</p>
+      <button class="quiz-button">Take Quiz</button>
+    </div>
+  </div>
+<section class="success-story">
+  <div class="container">
+    <h2 class="section-title">Real-Life Adoption Success Story</h2>
+    <div class="story">
+      <div class="story-image">
+        <img src="Adopted pet.jpg" alt="Adopted Pet">
+      </div>
+      <div class="story-content">
+        <div class="quote-container">
+          <div class="quote-icon">
+            <img src="quote icon.png" alt="Quote Icon">
+          </div>
+          <p class="quote">"Adopting Max was one of the best decisions we ever made. He brings so much joy and love into our home every day."</p>
+        </div>
+        <p class="author">- Emily, Proud Pet Parent</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .success-story {
+    background-color: #f9f9f9;
+    padding: 50px 0; 
+    text-align: center; 
+  }
+
+  .section-title {
+    font-size: 36px; 
+    color: #333; 
+    margin-bottom: 30px; 
+  }
+  .container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .story {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap;
+  }
+  .story-image {
+    max-width: 50%; 
+  }
+
+  .story-image img {
+    max-width: 100%; 
+    border-radius: 10px; 
+  }
+  .story-content {
+    flex: 1; 
+    max-width: 50%; 
+    padding: 0 20px; 
+  }
+.quote-container {
+  position: relative;
+  margin-bottom: 20px; 
+  display: flex;
+  align-items: center; 
+}
+
+.quote-icon {
+  margin-right: 10px;
+}
+
+.quote-icon img {
+  width: 50px; 
+}
+.quote {
+  font-size: 24px;
+  color: #555;
+  font-style: italic; 
+}
+
+.author {
+  font-size: 20px;
+  color: #777; 
+}
+footer {
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+</style>
+<footer>
+  <div class="contact-info">
+    <h3>Contact Us</h3>
+    <p>Email: info@petadoptioncenter.com</p>
+    <p>Phone: 123-456-7890</p>
+    <p>Address: 123 Main Street, City, Country</p>
+  </div>
+  <div class="social-links">
+    <h3>Follow Us</h3>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">Instagram</a>
+  </div>
+  <p>&copy; 2024 FurEver Pet Adoption Center</p>
+</footer>
+  <script>
+    
+    function generatePetProfiles(petsData) {
+      const petListSection = document.getElementById("pet-list");
+      petListSection.innerHTML = "";
+      petsData.forEach(pet => {
+        const petProfile = document.createElement("article");
+        petProfile.classList.add("pet-profile");
+        petProfile.innerHTML = `
+          <img src="${pet.image}" alt="${pet.name}">
+          <h2>${pet.name}</h2>
+          <p><strong>Type:</strong> ${pet.type}</p>
+          <p><strong>Age:</strong> ${pet.age} years old</p>
+          <p><strong>Personality:</strong> ${pet.personality}</p>
+          <p><strong>Description:</strong> ${pet.description}</p>
+          <button onclick="adoptPet('${pet.name}')">Adopt ${pet.name}</button>
+        `;
+
+        petListSection.appendChild(petProfile);
+      });
+    }
+    function adoptPet(petName) {
+  alert(`Congratulations! You've adopted ${petName}!`);
+}
+    window.addEventListener("load", function() {
+      generatePetProfiles(pets);
+    });
+
+    document.querySelector('.animated-adopt-me-button').addEventListener('click', function() {
+      window.location.href = 'main page.html';
+    });
+    document.querySelector('.quiz-button').addEventListener('click', function() {
+      alert('Quiz functionality will be implemented here.');
+    });
+  </script>
+</body>
+</html>
